@@ -59,4 +59,13 @@ class Hello {
       return num*factorial(num-1);
     }
   }
+
+  public static int fib(int num){
+    if(num == 0 || num == 1){
+      return 1;
+    } else {
+      return fib(n-1) + fib(n-2);
+    }
+
+  }
 }

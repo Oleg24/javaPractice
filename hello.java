@@ -16,6 +16,8 @@ class Hello {
 
     System.out.println("factorial: " + factorial(6));
 
+    printMultTable(6);
+
   }
 
   public static void howdy(String s){
@@ -64,8 +66,25 @@ class Hello {
     if(num == 0 || num == 1){
       return 1;
     } else {
-      return fib(n-1) + fib(n-2);
+      return fib(num-1) + fib(num-2);
     }
+  }
 
+  public static void printMultiples(int n, int high){
+    int i = 1;
+
+    while(i <= high){
+      System.out.print(n*i + "   ");
+      i++;
+    }
+    System.out.println("");
+  }
+
+  public static void printMultTable(int high) {
+    int i = 1;
+    while (i <= high) {
+      printMultiples(i, high);
+      i = i + 1;
+    }
   }
 }

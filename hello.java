@@ -16,7 +16,9 @@ class Hello {
 
     System.out.println("factorial: " + factorial(6));
 
-    printMultTable(6);
+    printMultTable(10);
+
+    testing(14);
 
   }
 
@@ -73,7 +75,7 @@ class Hello {
   public static void printMultiples(int n, int high){
     int i = 1;
 
-    while(i <= high){
+    while(i <= high && i <= n){
       System.out.print(n*i + "   ");
       i++;
     }
@@ -83,8 +85,17 @@ class Hello {
   public static void printMultTable(int high) {
     int i = 1;
     while (i <= high) {
+
       printMultiples(i, high);
       i = i + 1;
     }
+  }
+
+  public static void testing(int num){
+    int lastDigit = num%10;
+
+    int firstDigit = num/10;
+    System.out.print(lastDigit);
+    System.out.println(firstDigit);
   }
 }
